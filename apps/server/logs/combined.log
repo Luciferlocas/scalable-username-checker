@@ -370,3 +370,15 @@
 {"level":"info","message":"Trie initialized","timestamp":"2025-05-04T14:07:22.669Z"}
 {"level":"debug","message":"Added \"johndow\" to Trie","timestamp":"2025-05-04T14:07:22.669Z"}
 {"level":"debug","message":"Cached username \"johndow\" with exists=true","timestamp":"2025-05-04T14:07:22.766Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T14:13:54.113Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T14:13:54.198Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T14:13:54.199Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T14:13:54.489Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T14:13:54.490Z"}
+{"level":"info","message":"Loading 11 usernames into Bloom filter","timestamp":"2025-05-04T14:13:54.526Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T14:13:54.529Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T14:13:54.530Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T14:13:54.530Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T14:13:54.531Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T14:13:54.539Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T14:18:55.395Z"}
