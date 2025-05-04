@@ -1,0 +1,372 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T10:51:08.648Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T10:51:08.733Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T10:51:08.734Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T10:51:09.110Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T10:51:09.113Z"}
+{"level":"info","message":"Loading 1 usernames into Bloom filter","timestamp":"2025-05-04T10:51:09.158Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T10:51:09.165Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T10:51:09.166Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T10:51:09.166Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T10:51:09.167Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T10:51:09.179Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T10:56:10.314Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:01:11.277Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T11:03:19.257Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T11:03:19.328Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T11:03:19.329Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T11:03:19.573Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:03:19.576Z"}
+{"level":"info","message":"Loading 1 usernames into Bloom filter","timestamp":"2025-05-04T11:03:19.616Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T11:03:19.623Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T11:03:19.624Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T11:03:19.625Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T11:03:19.627Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T11:03:19.638Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:08:20.260Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:08:47.905Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T11:08:47.906Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:08:47.912Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": not found","timestamp":"2025-05-04T11:08:48.001Z"}
+{"level":"info","message":"Trie initialized","timestamp":"2025-05-04T11:08:48.003Z"}
+{"level":"debug","message":"Trie check for \"rohit\": not found","timestamp":"2025-05-04T11:08:48.004Z"}
+{"level":"debug","message":"Database check for \"rohit\": exists","timestamp":"2025-05-04T11:08:48.045Z"}
+{"level":"debug","message":"Cached username \"rohit\" with exists=true","timestamp":"2025-05-04T11:08:48.127Z"}
+{"level":"debug","message":"Added \"rohit\" to Trie","timestamp":"2025-05-04T11:08:48.128Z"}
+{"level":"debug","message":"Generated 5 suggestions for prefix \"rohit\"","timestamp":"2025-05-04T11:08:48.128Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:08:56.789Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T11:08:56.794Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:08:56.795Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:08:56.880Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:09:57.038Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T11:09:57.040Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:09:57.050Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:09:57.154Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T11:13:48.976Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T11:13:49.047Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T11:13:49.048Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T11:13:49.329Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:13:49.331Z"}
+{"level":"info","message":"Loading 1 usernames into Bloom filter","timestamp":"2025-05-04T11:13:49.363Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T11:13:49.366Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T11:13:49.367Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T11:13:49.369Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T11:13:49.370Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T11:13:49.378Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:18:50.236Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:23:51.302Z"}
+{"level":"error","message":"Failed to get all usernames connect ETIMEDOUT 159.41.242.237:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":"7fffffff00000000000001f0","maxSetVersion":159,"servers":{},"setName":"atlas-1113aj-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongoServerSelectionError: connect ETIMEDOUT 159.41.242.237:27017\n    at Timeout._onTimeout (C:\\Users\\rsomv\\OneDrive\\Desktop\\username\\node_modules\\.pnpm\\mongodb@5.9.2\\node_modules\\mongodb\\src\\sdam\\topology.ts:567:30)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)","timestamp":"2025-05-04T11:28:24.185Z"}
+{"level":"error","message":"Error getting all usernames connect ETIMEDOUT 159.41.242.237:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":"7fffffff00000000000001f0","maxSetVersion":159,"servers":{},"setName":"atlas-1113aj-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongoServerSelectionError: connect ETIMEDOUT 159.41.242.237:27017\n    at Timeout._onTimeout (C:\\Users\\rsomv\\OneDrive\\Desktop\\username\\node_modules\\.pnpm\\mongodb@5.9.2\\node_modules\\mongodb\\src\\sdam\\topology.ts:567:30)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)","timestamp":"2025-05-04T11:28:24.193Z"}
+{"level":"error","message":"Failed to get all usernames connect ETIMEDOUT 159.41.242.237:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":"7fffffff00000000000001f0","maxSetVersion":159,"servers":{},"setName":"atlas-1113aj-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongoServerSelectionError: connect ETIMEDOUT 159.41.242.237:27017\n    at Timeout._onTimeout (C:\\Users\\rsomv\\OneDrive\\Desktop\\username\\node_modules\\.pnpm\\mongodb@5.9.2\\node_modules\\mongodb\\src\\sdam\\topology.ts:567:30)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)","timestamp":"2025-05-04T11:28:56.697Z"}
+{"level":"error","message":"Error getting all usernames connect ETIMEDOUT 159.41.242.237:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":"7fffffff00000000000001f0","maxSetVersion":159,"servers":{},"setName":"atlas-1113aj-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongoServerSelectionError: connect ETIMEDOUT 159.41.242.237:27017\n    at Timeout._onTimeout (C:\\Users\\rsomv\\OneDrive\\Desktop\\username\\node_modules\\.pnpm\\mongodb@5.9.2\\node_modules\\mongodb\\src\\sdam\\topology.ts:567:30)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)","timestamp":"2025-05-04T11:28:56.698Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:34:17.017Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:34:17.025Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T11:34:17.026Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:34:17.033Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"Redis error read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2025-05-04T11:34:38.818Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:34:38.959Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:34:39.108Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:35:03.244Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:35:03.245Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T11:35:03.247Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:35:03.250Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:35:03.353Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:36:13.499Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:36:13.501Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T11:36:13.501Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:36:13.502Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:36:13.598Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:37:11.609Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T11:37:11.610Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:37:11.610Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:37:11.683Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:40:17.137Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-2","timestamp":"2025-05-04T11:40:17.143Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:40:17.144Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:42:12.244Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:42:52.144Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-3","timestamp":"2025-05-04T11:42:52.144Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:42:52.149Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:43:37.191Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-1","timestamp":"2025-05-04T11:43:37.192Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:43:37.192Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:44:03.659Z"}
+{"level":"info","message":"Checking username availability for \"abcd\" on server-2","timestamp":"2025-05-04T11:44:03.660Z"}
+{"level":"debug","message":"Bloom filter check for \"abcd\": definitely available","timestamp":"2025-05-04T11:44:03.660Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:44:24.615Z"}
+{"level":"info","message":"Checking username availability for \"abcd\" on server-3","timestamp":"2025-05-04T11:44:24.616Z"}
+{"level":"debug","message":"Bloom filter check for \"abcd\": definitely available","timestamp":"2025-05-04T11:44:24.617Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:45:58.725Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-1","timestamp":"2025-05-04T11:45:58.726Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:45:58.727Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T11:47:13.344Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:47:30.013Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-2","timestamp":"2025-05-04T11:47:30.014Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:47:30.014Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:49:51.036Z"}
+{"level":"info","message":"Checking username availability for \"abc1\" on server-3","timestamp":"2025-05-04T11:49:51.037Z"}
+{"level":"debug","message":"Bloom filter check for \"abc1\": definitely available","timestamp":"2025-05-04T11:49:51.037Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:50:58.400Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T11:50:58.401Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:50:58.401Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:50:58.520Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:51:46.458Z"}
+{"level":"info","message":"Checking username availability for \"rohit2\" on server-2","timestamp":"2025-05-04T11:51:46.458Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit2\": definitely available","timestamp":"2025-05-04T11:51:46.459Z"}
+{"level":"info","message":"Attempting to register username: rohit2","timestamp":"2025-05-04T11:51:48.098Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:51:48.099Z"}
+{"level":"info","message":"Checking username availability for \"rohit2\" on server-3","timestamp":"2025-05-04T11:51:48.100Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit2\": definitely available","timestamp":"2025-05-04T11:51:48.101Z"}
+{"level":"debug","message":"Added \"rohit2\" to database","timestamp":"2025-05-04T11:51:48.188Z"}
+{"level":"debug","message":"Added \"rohit2\" to Bloom filter","timestamp":"2025-05-04T11:51:48.190Z"}
+{"level":"info","message":"Trie initialized","timestamp":"2025-05-04T11:51:48.191Z"}
+{"level":"debug","message":"Added \"rohit2\" to Trie","timestamp":"2025-05-04T11:51:48.192Z"}
+{"level":"debug","message":"Cached username \"rohit2\" with exists=true","timestamp":"2025-05-04T11:51:48.289Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:51:58.553Z"}
+{"level":"info","message":"Checking username availability for \"rohit2\" on server-1","timestamp":"2025-05-04T11:51:58.555Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit2\": might exist","timestamp":"2025-05-04T11:51:58.555Z"}
+{"level":"debug","message":"Redis cache check for \"rohit2\": found","timestamp":"2025-05-04T11:51:58.608Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:55:49.211Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:55:49.219Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T11:55:49.220Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:55:49.221Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:55:49.334Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:55:56.854Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T11:55:56.855Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T11:55:56.856Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:55:56.857Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:55:56.912Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T11:56:26.027Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T11:56:26.028Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T11:56:26.029Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:56:26.029Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:56:26.134Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T11:56:53.709Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T11:56:53.709Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T11:56:53.710Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T11:56:53.808Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T12:01:54.273Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T12:04:28.877Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:04:28.881Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T12:04:28.881Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:04:28.883Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:04:28.940Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T12:07:49.045Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:07:49.046Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T12:07:49.046Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:07:49.047Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:07:49.101Z"}
+{"level":"info","message":"Attempting to register username: rohit","timestamp":"2025-05-04T12:09:11.209Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:09:11.210Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T12:09:11.211Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:09:11.211Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": not found","timestamp":"2025-05-04T12:09:11.264Z"}
+{"level":"debug","message":"Trie check for \"rohit\": not found","timestamp":"2025-05-04T12:09:11.269Z"}
+{"level":"debug","message":"Database check for \"rohit\": exists","timestamp":"2025-05-04T12:09:11.299Z"}
+{"level":"debug","message":"Cached username \"rohit\" with exists=true","timestamp":"2025-05-04T12:09:11.354Z"}
+{"level":"debug","message":"Added \"rohit\" to Trie","timestamp":"2025-05-04T12:09:11.354Z"}
+{"level":"debug","message":"Generated 5 suggestions for prefix \"rohit\"","timestamp":"2025-05-04T12:09:11.356Z"}
+{"level":"info","message":"Attempting to register username: rohit23","timestamp":"2025-05-04T12:09:19.545Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:09:19.546Z"}
+{"level":"info","message":"Checking username availability for \"rohit23\" on server-3","timestamp":"2025-05-04T12:09:19.548Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit23\": definitely available","timestamp":"2025-05-04T12:09:19.549Z"}
+{"level":"debug","message":"Added \"rohit23\" to database","timestamp":"2025-05-04T12:09:19.622Z"}
+{"level":"debug","message":"Added \"rohit23\" to Bloom filter","timestamp":"2025-05-04T12:09:19.623Z"}
+{"level":"debug","message":"Added \"rohit23\" to Trie","timestamp":"2025-05-04T12:09:19.624Z"}
+{"level":"debug","message":"Cached username \"rohit23\" with exists=true","timestamp":"2025-05-04T12:09:19.677Z"}
+{"level":"info","message":"Attempting to register username: rohitwwq","timestamp":"2025-05-04T12:09:57.428Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:09:57.429Z"}
+{"level":"info","message":"Checking username availability for \"rohitwwq\" on server-1","timestamp":"2025-05-04T12:09:57.429Z"}
+{"level":"debug","message":"Bloom filter check for \"rohitwwq\": definitely available","timestamp":"2025-05-04T12:09:57.430Z"}
+{"level":"debug","message":"Added \"rohitwwq\" to database","timestamp":"2025-05-04T12:09:57.485Z"}
+{"level":"debug","message":"Added \"rohitwwq\" to Bloom filter","timestamp":"2025-05-04T12:09:57.486Z"}
+{"level":"debug","message":"Added \"rohitwwq\" to Trie","timestamp":"2025-05-04T12:09:57.486Z"}
+{"level":"debug","message":"Cached username \"rohitwwq\" with exists=true","timestamp":"2025-05-04T12:09:57.539Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:29:10.664Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-2","timestamp":"2025-05-04T12:29:10.668Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": definitely available","timestamp":"2025-05-04T12:29:10.672Z"}
+{"level":"info","message":"Attempting to register username: euclid","timestamp":"2025-05-04T12:29:34.266Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:29:34.267Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-3","timestamp":"2025-05-04T12:29:34.267Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": definitely available","timestamp":"2025-05-04T12:29:34.267Z"}
+{"level":"debug","message":"Added \"euclid\" to database","timestamp":"2025-05-04T12:29:37.358Z"}
+{"level":"debug","message":"Added \"euclid\" to Bloom filter","timestamp":"2025-05-04T12:29:37.362Z"}
+{"level":"debug","message":"Added \"euclid\" to Trie","timestamp":"2025-05-04T12:29:37.364Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"Redis error read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2025-05-04T12:29:56.596Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T12:29:56.784Z"}
+{"level":"debug","message":"Cached username \"euclid\" with exists=true","timestamp":"2025-05-04T12:29:57.006Z"}
+{"level":"info","message":"Attempting to register username: euclid","timestamp":"2025-05-04T12:30:07.596Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:30:07.597Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-1","timestamp":"2025-05-04T12:30:07.597Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:30:07.598Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:30:07.703Z"}
+{"level":"info","message":"Attempting to register username: euclid","timestamp":"2025-05-04T12:30:39.462Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:30:39.463Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-2","timestamp":"2025-05-04T12:30:39.463Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:30:39.463Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:30:39.515Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:30:48.104Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-3","timestamp":"2025-05-04T12:30:48.105Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:30:48.105Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:30:48.195Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:30:52.220Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-1","timestamp":"2025-05-04T12:30:52.221Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:30:52.222Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:30:52.324Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:31:18.565Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-2","timestamp":"2025-05-04T12:31:18.565Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:31:18.567Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:31:18.671Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:31:26.146Z"}
+{"level":"info","message":"Checking username availability for \"euclid\" on server-3","timestamp":"2025-05-04T12:31:26.147Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid\": might exist","timestamp":"2025-05-04T12:31:26.147Z"}
+{"level":"debug","message":"Redis cache check for \"euclid\": found","timestamp":"2025-05-04T12:31:26.220Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:32:30.333Z"}
+{"level":"info","message":"Checking username availability for \"euclid1\" on server-1","timestamp":"2025-05-04T12:32:30.335Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid1\": definitely available","timestamp":"2025-05-04T12:32:30.336Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:32:56.355Z"}
+{"level":"info","message":"Checking username availability for \"euclid2\" on server-2","timestamp":"2025-05-04T12:32:56.355Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid2\": definitely available","timestamp":"2025-05-04T12:32:56.356Z"}
+{"level":"info","message":"Attempting to register username: euclid2","timestamp":"2025-05-04T12:33:07.621Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:33:07.621Z"}
+{"level":"info","message":"Checking username availability for \"euclid2\" on server-3","timestamp":"2025-05-04T12:33:07.622Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid2\": definitely available","timestamp":"2025-05-04T12:33:07.622Z"}
+{"level":"debug","message":"Added \"euclid2\" to database","timestamp":"2025-05-04T12:33:07.695Z"}
+{"level":"debug","message":"Added \"euclid2\" to Bloom filter","timestamp":"2025-05-04T12:33:07.696Z"}
+{"level":"debug","message":"Added \"euclid2\" to Trie","timestamp":"2025-05-04T12:33:07.696Z"}
+{"level":"debug","message":"Cached username \"euclid2\" with exists=true","timestamp":"2025-05-04T12:33:07.793Z"}
+{"level":"info","message":"Attempting to register username: euclid3","timestamp":"2025-05-04T12:33:19.588Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:33:19.589Z"}
+{"level":"info","message":"Checking username availability for \"euclid3\" on server-1","timestamp":"2025-05-04T12:33:19.589Z"}
+{"level":"debug","message":"Bloom filter check for \"euclid3\": definitely available","timestamp":"2025-05-04T12:33:19.589Z"}
+{"level":"debug","message":"Added \"euclid3\" to database","timestamp":"2025-05-04T12:33:19.652Z"}
+{"level":"debug","message":"Added \"euclid3\" to Bloom filter","timestamp":"2025-05-04T12:33:19.653Z"}
+{"level":"debug","message":"Added \"euclid3\" to Trie","timestamp":"2025-05-04T12:33:19.653Z"}
+{"level":"debug","message":"Cached username \"euclid3\" with exists=true","timestamp":"2025-05-04T12:33:19.709Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:34:11.886Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T12:34:11.887Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:34:11.888Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:34:12.000Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"Redis error read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2025-05-04T12:49:36.451Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T12:49:36.886Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:49:46.063Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T12:49:46.064Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:49:46.064Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:49:46.146Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:49:47.895Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T12:49:47.896Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:49:47.896Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:49:47.960Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:49:49.235Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-2","timestamp":"2025-05-04T12:49:49.236Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:49:49.237Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:49:49.286Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:49:50.506Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-3","timestamp":"2025-05-04T12:49:50.506Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:49:50.510Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:49:50.560Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T12:49:51.580Z"}
+{"level":"info","message":"Checking username availability for \"rohit\" on server-1","timestamp":"2025-05-04T12:49:51.581Z"}
+{"level":"debug","message":"Bloom filter check for \"rohit\": might exist","timestamp":"2025-05-04T12:49:51.581Z"}
+{"level":"debug","message":"Redis cache check for \"rohit\": found","timestamp":"2025-05-04T12:49:51.647Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T12:54:52.276Z"}
+{"level":"info","message":"Attempting to register username: luciferlocas","timestamp":"2025-05-04T12:56:32.579Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T12:56:32.582Z"}
+{"level":"info","message":"Checking username availability for \"luciferlocas\" on server-2","timestamp":"2025-05-04T12:56:32.582Z"}
+{"level":"debug","message":"Bloom filter check for \"luciferlocas\": definitely available","timestamp":"2025-05-04T12:56:32.585Z"}
+{"level":"debug","message":"Added \"luciferlocas\" to database","timestamp":"2025-05-04T12:56:32.662Z"}
+{"level":"debug","message":"Added \"luciferlocas\" to Bloom filter","timestamp":"2025-05-04T12:56:32.663Z"}
+{"level":"debug","message":"Added \"luciferlocas\" to Trie","timestamp":"2025-05-04T12:56:32.664Z"}
+{"level":"debug","message":"Cached username \"luciferlocas\" with exists=true","timestamp":"2025-05-04T12:56:32.745Z"}
+{"level":"info","message":"Attempting to register username: lucifer","timestamp":"2025-05-04T12:56:38.679Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T12:56:38.680Z"}
+{"level":"info","message":"Checking username availability for \"lucifer\" on server-3","timestamp":"2025-05-04T12:56:38.680Z"}
+{"level":"debug","message":"Bloom filter check for \"lucifer\": definitely available","timestamp":"2025-05-04T12:56:38.680Z"}
+{"level":"debug","message":"Added \"lucifer\" to database","timestamp":"2025-05-04T12:56:38.736Z"}
+{"level":"debug","message":"Added \"lucifer\" to Bloom filter","timestamp":"2025-05-04T12:56:38.737Z"}
+{"level":"debug","message":"Added \"lucifer\" to Trie","timestamp":"2025-05-04T12:56:38.737Z"}
+{"level":"debug","message":"Cached username \"lucifer\" with exists=true","timestamp":"2025-05-04T12:56:38.788Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:01:39.320Z"}
+{"level":"info","message":"Attempting to register username: lucifer2","timestamp":"2025-05-04T13:04:10.277Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T13:04:10.279Z"}
+{"level":"info","message":"Checking username availability for \"lucifer2\" on server-1","timestamp":"2025-05-04T13:04:10.280Z"}
+{"level":"debug","message":"Bloom filter check for \"lucifer2\": definitely available","timestamp":"2025-05-04T13:04:10.283Z"}
+{"level":"debug","message":"Added \"lucifer2\" to database","timestamp":"2025-05-04T13:04:10.365Z"}
+{"level":"debug","message":"Added \"lucifer2\" to Bloom filter","timestamp":"2025-05-04T13:04:10.369Z"}
+{"level":"debug","message":"Added \"lucifer2\" to Trie","timestamp":"2025-05-04T13:04:10.370Z"}
+{"level":"debug","message":"Cached username \"lucifer2\" with exists=true","timestamp":"2025-05-04T13:04:10.462Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:09:11.249Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T13:10:39.582Z"}
+{"level":"info","message":"Checking username availability for \"rohti-singh\" on server-2","timestamp":"2025-05-04T13:10:39.587Z"}
+{"level":"debug","message":"Bloom filter check for \"rohti-singh\": definitely available","timestamp":"2025-05-04T13:10:39.589Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:14:12.242Z"}
+{"level":"debug","message":"Load balancer selected server: server-3","timestamp":"2025-05-04T13:14:46.184Z"}
+{"level":"info","message":"Checking username availability for \"rohits-sing\" on server-3","timestamp":"2025-05-04T13:14:46.185Z"}
+{"level":"debug","message":"Bloom filter check for \"rohits-sing\": definitely available","timestamp":"2025-05-04T13:14:46.186Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:19:13.429Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T13:38:15.964Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T13:38:16.117Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T13:38:16.118Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T13:38:16.375Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:38:16.375Z"}
+{"level":"info","message":"Loading 10 usernames into Bloom filter","timestamp":"2025-05-04T13:38:16.405Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T13:38:16.409Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T13:38:16.409Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T13:38:16.410Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T13:38:16.411Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T13:38:16.417Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T13:44:37.761Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T13:44:37.819Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T13:44:37.820Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T13:44:38.193Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:44:38.194Z"}
+{"level":"info","message":"Loading 10 usernames into Bloom filter","timestamp":"2025-05-04T13:44:38.225Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T13:44:38.227Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T13:44:38.227Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T13:44:38.228Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T13:44:38.228Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T13:44:38.233Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T13:59:16.370Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T13:59:16.433Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T13:59:16.434Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T13:59:16.630Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T13:59:16.631Z"}
+{"level":"info","message":"Loading 10 usernames into Bloom filter","timestamp":"2025-05-04T13:59:16.666Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T13:59:16.670Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T13:59:16.670Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T13:59:16.671Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T13:59:16.671Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T13:59:16.678Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T14:01:40.397Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T14:01:40.458Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T14:01:40.459Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T14:01:40.690Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T14:01:40.690Z"}
+{"level":"info","message":"Loading 10 usernames into Bloom filter","timestamp":"2025-05-04T14:01:40.723Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T14:01:40.725Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T14:01:40.725Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T14:01:40.726Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T14:01:40.726Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T14:01:40.732Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-04T14:06:08.107Z"}
+{"level":"info","message":"Database initialized with indexes","timestamp":"2025-05-04T14:06:08.168Z"}
+{"level":"info","message":"Connected to database","timestamp":"2025-05-04T14:06:08.169Z"}
+{"level":"info","message":"Redis connection tested successfully","timestamp":"2025-05-04T14:06:08.426Z"}
+{"level":"info","message":"Connected to Redis","timestamp":"2025-05-04T14:06:08.426Z"}
+{"level":"info","message":"Loading 10 usernames into Bloom filter","timestamp":"2025-05-04T14:06:08.453Z"}
+{"level":"info","message":"Bloom filter successfully initialized","timestamp":"2025-05-04T14:06:08.455Z"}
+{"level":"info","message":"Bloom filter initialized","timestamp":"2025-05-04T14:06:08.455Z"}
+{"level":"info","message":"Load balancer initialized with 3 servers using round-robin strategy","timestamp":"2025-05-04T14:06:08.456Z"}
+{"level":"info","message":"Load balancer initialized","timestamp":"2025-05-04T14:06:08.456Z"}
+{"level":"info","message":"Server running on port 8000","timestamp":"2025-05-04T14:06:08.462Z"}
+{"level":"debug","message":"Load balancer selected server: server-1","timestamp":"2025-05-04T14:07:20.795Z"}
+{"level":"info","message":"Checking username availability for \"johndow\" on server-1","timestamp":"2025-05-04T14:07:20.796Z"}
+{"level":"debug","message":"Bloom filter check for \"johndow\": definitely available","timestamp":"2025-05-04T14:07:20.796Z"}
+{"level":"info","message":"Attempting to register username: johndow","timestamp":"2025-05-04T14:07:22.583Z"}
+{"level":"debug","message":"Load balancer selected server: server-2","timestamp":"2025-05-04T14:07:22.585Z"}
+{"level":"info","message":"Checking username availability for \"johndow\" on server-2","timestamp":"2025-05-04T14:07:22.585Z"}
+{"level":"debug","message":"Bloom filter check for \"johndow\": definitely available","timestamp":"2025-05-04T14:07:22.585Z"}
+{"level":"debug","message":"Added \"johndow\" to database","timestamp":"2025-05-04T14:07:22.668Z"}
+{"level":"debug","message":"Added \"johndow\" to Bloom filter","timestamp":"2025-05-04T14:07:22.668Z"}
+{"level":"info","message":"Trie initialized","timestamp":"2025-05-04T14:07:22.669Z"}
+{"level":"debug","message":"Added \"johndow\" to Trie","timestamp":"2025-05-04T14:07:22.669Z"}
+{"level":"debug","message":"Cached username \"johndow\" with exists=true","timestamp":"2025-05-04T14:07:22.766Z"}
