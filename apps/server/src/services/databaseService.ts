@@ -1,6 +1,5 @@
 import { MongoClient, Collection, Db } from "mongodb";
 import { Username } from "../models/username";
-import { logger } from "../utils/logger";
 
 let client: MongoClient;
 let db: Db;
@@ -13,16 +12,16 @@ export async function connectToDatabase(): Promise<void> {
     client = new MongoClient(uri);
 
     await client.connect();
-    logger.info("Connected to MongoDB");
+    console.log("Connected to MongoDB");
 
     db = client.db();
     usernameCollection = db.collection<Username>("usernames");
 
     await usernameCollection.createIndex({ username: 1 }, { unique: true });
 
-    logger.info("Database initialized with indexes");
+    console.log("Database initialized with indexes");
   } catch (error) {
-    logger.error("Failed to connect to database", error);
+    console.error("Failed to connect to database", error);
     throw error;
   }
 }
@@ -32,13 +31,13 @@ export async function getAllUsernames(): Promise<string[]> {
     const users = await usernameCollection.find({}).toArray();
     return users.map((user) => user.username);
   } catch (error) {
-    logger.error("Failed to get all usernames", error);
+    console.error("Failed to get all usernames", error);
     throw error;
   }
 }
 
 export async function checkUsernameInDatabase(
-  username: string,
+  username: string
 ): Promise<boolean> {
   try {
     const normalizedUsername = username.toLowerCase();
@@ -46,18 +45,18 @@ export async function checkUsernameInDatabase(
       username: normalizedUsername,
     });
 
-    logger.debug(
-      `Database check for "${username}": ${result ? "exists" : "available"}`,
+    console.debug(
+      `Database check for "${username}": ${result ? "exists" : "available"}`
     );
     return !!result;
   } catch (error) {
-    logger.error(`Error checking username in database: ${username}`, error);
+    console.error(`Error checking username in database: ${username}`, error);
     throw error;
   }
 }
 
 export async function addUsernameToDatabase(
-  username: string,
+  username: string
 ): Promise<boolean> {
   try {
     const normalizedUsername = username.toLowerCase();
@@ -67,7 +66,7 @@ export async function addUsernameToDatabase(
     });
 
     if (existingUser) {
-      logger.debug(`Username "${username}" already exists in database`);
+      console.debug(`Username "${username}" already exists in database`);
       return false;
     }
 
@@ -77,10 +76,10 @@ export async function addUsernameToDatabase(
       status: "active",
     });
 
-    logger.debug(`Added "${username}" to database`);
+    console.debug(`Added "${username}" to database`);
     return true;
   } catch (error) {
-    logger.error(`Error adding username to database: ${username}`, error);
+    console.error(`Error adding username to database: ${username}`, error);
     throw error;
   }
 }

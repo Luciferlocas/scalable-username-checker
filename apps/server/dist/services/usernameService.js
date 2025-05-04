@@ -7,11 +7,10 @@ const redisService_1 = require("./redisService");
 const trieService_1 = require("./trieService");
 const databaseService_1 = require("./databaseService");
 const loadBalancerService_1 = require("./loadBalancerService");
-const logger_1 = require("../utils/logger");
 async function checkUsernameAvailability(username) {
     const startTime = Date.now();
     const server = (0, loadBalancerService_1.getNextServer)();
-    logger_1.logger.info(`Checking username availability for "${username}" on ${server}`);
+    console.log(`Checking username availability for "${username}" on ${server}`);
     if (!(0, bloomFilterService_1.checkUsernameInBloomFilter)(username)) {
         const endTime = Date.now();
         return {
@@ -59,7 +58,7 @@ async function checkUsernameAvailability(username) {
 }
 async function registerUsername(username) {
     try {
-        logger_1.logger.info(`Attempting to register username: ${username}`);
+        console.log(`Attempting to register username: ${username}`);
         const availabilityCheck = await checkUsernameAvailability(username);
         if (!availabilityCheck.available) {
             return {
@@ -85,7 +84,7 @@ async function registerUsername(username) {
         }
     }
     catch (error) {
-        logger_1.logger.error(`Error registering username: ${username}`, error);
+        console.error(`Error registering username: ${username}`, error);
         return {
             success: false,
             message: `Error registering username: ${error instanceof Error ? error.message : "Unknown error"}`,

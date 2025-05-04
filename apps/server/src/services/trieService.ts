@@ -1,5 +1,4 @@
 import { config } from "../config/config";
-import { logger } from "../utils/logger";
 
 class TrieNode {
   children: Map<string, TrieNode>;
@@ -66,7 +65,7 @@ class Trie {
     node: TrieNode,
     prefix: string,
     result: string[],
-    limit: number,
+    limit: number
   ): void {
     if (result.length >= limit) {
       return;
@@ -108,7 +107,7 @@ let trieInstance: Trie;
 export function initTrie(): Trie {
   if (!trieInstance) {
     trieInstance = new Trie(config.trie.maxDepth);
-    logger.info("Trie initialized");
+    console.log("Trie initialized");
   }
   return trieInstance;
 }
@@ -123,26 +122,26 @@ export function getTrie(): Trie {
 export function addUsernameToTrie(username: string): void {
   const trie = getTrie();
   trie.insert(username.toLowerCase());
-  logger.debug(`Added "${username}" to Trie`);
+  console.debug(`Added "${username}" to Trie`);
 }
 
 export function checkUsernameInTrie(username: string): boolean {
   const trie = getTrie();
   const exists = trie.search(username.toLowerCase());
-  logger.debug(
-    `Trie check for "${username}": ${exists ? "exists" : "not found"}`,
+  console.debug(
+    `Trie check for "${username}": ${exists ? "exists" : "not found"}`
   );
   return exists;
 }
 
 export function generateUsernameSuggestions(
   prefix: string,
-  count: number = 5,
+  count: number = 5
 ): string[] {
   const trie = getTrie();
   const suggestions = trie.generateSuggestions(prefix.toLowerCase(), count);
-  logger.debug(
-    `Generated ${suggestions.length} suggestions for prefix "${prefix}"`,
+  console.debug(
+    `Generated ${suggestions.length} suggestions for prefix "${prefix}"`
   );
   return suggestions;
 }

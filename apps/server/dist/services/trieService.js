@@ -6,7 +6,6 @@ exports.addUsernameToTrie = addUsernameToTrie;
 exports.checkUsernameInTrie = checkUsernameInTrie;
 exports.generateUsernameSuggestions = generateUsernameSuggestions;
 const config_1 = require("../config/config");
-const logger_1 = require("../utils/logger");
 class TrieNode {
     constructor() {
         this.children = new Map();
@@ -82,7 +81,7 @@ let trieInstance;
 function initTrie() {
     if (!trieInstance) {
         trieInstance = new Trie(config_1.config.trie.maxDepth);
-        logger_1.logger.info("Trie initialized");
+        console.log("Trie initialized");
     }
     return trieInstance;
 }
@@ -95,17 +94,17 @@ function getTrie() {
 function addUsernameToTrie(username) {
     const trie = getTrie();
     trie.insert(username.toLowerCase());
-    logger_1.logger.debug(`Added "${username}" to Trie`);
+    console.debug(`Added "${username}" to Trie`);
 }
 function checkUsernameInTrie(username) {
     const trie = getTrie();
     const exists = trie.search(username.toLowerCase());
-    logger_1.logger.debug(`Trie check for "${username}": ${exists ? "exists" : "not found"}`);
+    console.debug(`Trie check for "${username}": ${exists ? "exists" : "not found"}`);
     return exists;
 }
 function generateUsernameSuggestions(prefix, count = 5) {
     const trie = getTrie();
     const suggestions = trie.generateSuggestions(prefix.toLowerCase(), count);
-    logger_1.logger.debug(`Generated ${suggestions.length} suggestions for prefix "${prefix}"`);
+    console.debug(`Generated ${suggestions.length} suggestions for prefix "${prefix}"`);
     return suggestions;
 }

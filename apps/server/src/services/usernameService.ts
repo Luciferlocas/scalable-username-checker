@@ -14,15 +14,14 @@ import {
   addUsernameToDatabase,
 } from "./databaseService";
 import { getNextServer } from "./loadBalancerService";
-import { logger } from "../utils/logger";
 
 export async function checkUsernameAvailability(
-  username: string,
+  username: string
 ): Promise<UsernameCheckResult> {
   const startTime = Date.now();
   const server = getNextServer();
 
-  logger.info(`Checking username availability for "${username}" on ${server}`);
+  console.log(`Checking username availability for "${username}" on ${server}`);
 
   if (!checkUsernameInBloomFilter(username)) {
     const endTime = Date.now();
@@ -79,10 +78,10 @@ export async function checkUsernameAvailability(
 }
 
 export async function registerUsername(
-  username: string,
+  username: string
 ): Promise<{ success: boolean; message: string }> {
   try {
-    logger.info(`Attempting to register username: ${username}`);
+    console.log(`Attempting to register username: ${username}`);
 
     const availabilityCheck = await checkUsernameAvailability(username);
 
@@ -111,7 +110,7 @@ export async function registerUsername(
       };
     }
   } catch (error) {
-    logger.error(`Error registering username: ${username}`, error);
+    console.error(`Error registering username: ${username}`, error);
     return {
       success: false,
       message: `Error registering username: ${error instanceof Error ? error.message : "Unknown error"}`,

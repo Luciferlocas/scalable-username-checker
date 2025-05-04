@@ -5,7 +5,6 @@ exports.createUsername = createUsername;
 exports.getAllUsernamesInDatabase = getAllUsernamesInDatabase;
 const usernameService_1 = require("../services/usernameService");
 const databaseService_1 = require("../services/databaseService");
-const logger_1 = require("../utils/logger");
 async function checkUsername(req, res) {
     try {
         const { username } = req.params;
@@ -23,7 +22,7 @@ async function checkUsername(req, res) {
         res.json(result);
     }
     catch (error) {
-        logger_1.logger.error("Error checking username", error);
+        console.error("Error checking username", error);
         res.status(500).json({
             error: "Failed to check username availability",
             message: error instanceof Error ? error.message : "Unknown error",
@@ -52,7 +51,7 @@ async function createUsername(req, res) {
         }
     }
     catch (error) {
-        logger_1.logger.error("Error creating username", error);
+        console.error("Error creating username", error);
         res.status(500).json({
             error: "Failed to register username",
             message: error instanceof Error ? error.message : "Unknown error",
@@ -65,7 +64,7 @@ async function getAllUsernamesInDatabase(req, res) {
         res.json({ usernames });
     }
     catch (error) {
-        logger_1.logger.error("Error getting all usernames", error);
+        console.error("Error getting all usernames", error);
         res.status(500).json({
             error: "Failed to get usernames",
             message: error instanceof Error ? error.message : "Unknown error",

@@ -4,11 +4,10 @@ import {
   registerUsername,
 } from "../services/usernameService";
 import { getAllUsernames } from "../services/databaseService";
-import { logger } from "../utils/logger";
 
 export async function checkUsername(
   req: Request,
-  res: Response,
+  res: Response
 ): Promise<void> {
   try {
     const { username } = req.params;
@@ -30,7 +29,7 @@ export async function checkUsername(
 
     res.json(result);
   } catch (error) {
-    logger.error("Error checking username", error);
+    console.error("Error checking username", error);
     res.status(500).json({
       error: "Failed to check username availability",
       message: error instanceof Error ? error.message : "Unknown error",
@@ -40,7 +39,7 @@ export async function checkUsername(
 
 export async function createUsername(
   req: Request,
-  res: Response,
+  res: Response
 ): Promise<void> {
   try {
     const { username } = req.body;
@@ -66,7 +65,7 @@ export async function createUsername(
       res.status(409).json(result);
     }
   } catch (error) {
-    logger.error("Error creating username", error);
+    console.error("Error creating username", error);
     res.status(500).json({
       error: "Failed to register username",
       message: error instanceof Error ? error.message : "Unknown error",
@@ -76,13 +75,13 @@ export async function createUsername(
 
 export async function getAllUsernamesInDatabase(
   req: Request,
-  res: Response,
+  res: Response
 ): Promise<void> {
   try {
     const usernames = await getAllUsernames();
     res.json({ usernames });
   } catch (error) {
-    logger.error("Error getting all usernames", error);
+    console.error("Error getting all usernames", error);
     res.status(500).json({
       error: "Failed to get usernames",
       message: error instanceof Error ? error.message : "Unknown error",

@@ -1,5 +1,4 @@
 import { config } from "../config/config";
-import { logger } from "../utils/logger";
 
 class LoadBalancer {
   private servers: string[];
@@ -11,8 +10,8 @@ class LoadBalancer {
     this.currentIndex = 0;
     this.strategy = strategy;
 
-    logger.info(
-      `Load balancer initialized with ${servers} servers using ${strategy} strategy`,
+    console.log(
+      `Load balancer initialized with ${servers} servers using ${strategy} strategy`
     );
   }
 
@@ -44,7 +43,7 @@ export function initLoadBalancer(): LoadBalancer {
   if (!loadBalancerInstance) {
     loadBalancerInstance = new LoadBalancer(
       config.loadBalancer.servers,
-      config.loadBalancer.strategy,
+      config.loadBalancer.strategy
     );
   }
   return loadBalancerInstance;
@@ -60,6 +59,6 @@ export function getLoadBalancer(): LoadBalancer {
 export function getNextServer(): string {
   const loadBalancer = getLoadBalancer();
   const server = loadBalancer.getNextServer();
-  logger.debug(`Load balancer selected server: ${server}`);
+  console.debug(`Load balancer selected server: ${server}`);
   return server;
 }

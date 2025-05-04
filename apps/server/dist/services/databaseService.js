@@ -5,7 +5,6 @@ exports.getAllUsernames = getAllUsernames;
 exports.checkUsernameInDatabase = checkUsernameInDatabase;
 exports.addUsernameToDatabase = addUsernameToDatabase;
 const mongodb_1 = require("mongodb");
-const logger_1 = require("../utils/logger");
 let client;
 let db;
 let usernameCollection;
@@ -14,14 +13,14 @@ async function connectToDatabase() {
         const uri = process.env.MONGO_URI || "mongodb://localhost:27017/username_db";
         client = new mongodb_1.MongoClient(uri);
         await client.connect();
-        logger_1.logger.info("Connected to MongoDB");
+        console.log("Connected to MongoDB");
         db = client.db();
         usernameCollection = db.collection("usernames");
         await usernameCollection.createIndex({ username: 1 }, { unique: true });
-        logger_1.logger.info("Database initialized with indexes");
+        console.log("Database initialized with indexes");
     }
     catch (error) {
-        logger_1.logger.error("Failed to connect to database", error);
+        console.error("Failed to connect to database", error);
         throw error;
     }
 }
@@ -31,7 +30,7 @@ async function getAllUsernames() {
         return users.map((user) => user.username);
     }
     catch (error) {
-        logger_1.logger.error("Failed to get all usernames", error);
+        console.error("Failed to get all usernames", error);
         throw error;
     }
 }
@@ -41,11 +40,11 @@ async function checkUsernameInDatabase(username) {
         const result = await usernameCollection.findOne({
             username: normalizedUsername,
         });
-        logger_1.logger.debug(`Database check for "${username}": ${result ? "exists" : "available"}`);
+        console.debug(`Database check for "${username}": ${result ? "exists" : "available"}`);
         return !!result;
     }
     catch (error) {
-        logger_1.logger.error(`Error checking username in database: ${username}`, error);
+        console.error(`Error checking username in database: ${username}`, error);
         throw error;
     }
 }
@@ -56,7 +55,7 @@ async function addUsernameToDatabase(username) {
             username: normalizedUsername,
         });
         if (existingUser) {
-            logger_1.logger.debug(`Username "${username}" already exists in database`);
+            console.debug(`Username "${username}" already exists in database`);
             return false;
         }
         await usernameCollection.insertOne({
@@ -64,11 +63,11 @@ async function addUsernameToDatabase(username) {
             created_at: new Date(),
             status: "active",
         });
-        logger_1.logger.debug(`Added "${username}" to database`);
+        console.debug(`Added "${username}" to database`);
         return true;
     }
     catch (error) {
-        logger_1.logger.error(`Error adding username to database: ${username}`, error);
+        console.error(`Error adding username to database: ${username}`, error);
         throw error;
     }
 }

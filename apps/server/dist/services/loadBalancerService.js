@@ -4,13 +4,12 @@ exports.initLoadBalancer = initLoadBalancer;
 exports.getLoadBalancer = getLoadBalancer;
 exports.getNextServer = getNextServer;
 const config_1 = require("../config/config");
-const logger_1 = require("../utils/logger");
 class LoadBalancer {
     constructor(servers, strategy) {
         this.servers = Array.from({ length: servers }, (_, i) => `server-${i + 1}`);
         this.currentIndex = 0;
         this.strategy = strategy;
-        logger_1.logger.info(`Load balancer initialized with ${servers} servers using ${strategy} strategy`);
+        console.log(`Load balancer initialized with ${servers} servers using ${strategy} strategy`);
     }
     getNextServer() {
         if (this.strategy === "round-robin") {
@@ -49,6 +48,6 @@ function getLoadBalancer() {
 function getNextServer() {
     const loadBalancer = getLoadBalancer();
     const server = loadBalancer.getNextServer();
-    logger_1.logger.debug(`Load balancer selected server: ${server}`);
+    console.debug(`Load balancer selected server: ${server}`);
     return server;
 }
