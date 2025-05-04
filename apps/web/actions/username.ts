@@ -13,8 +13,6 @@ export async function checkUsernameAction(username: string) {
     }
     const data = await response.json();
 
-    console.log(data);
-
     return data;
   } catch (error) {
     console.error("Error checking username:", error);

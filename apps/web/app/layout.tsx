@@ -53,7 +53,7 @@ export default function RootLayout({
                 <Link
                   isExternal
                   className="flex items-center gap-1 text-current"
-                  href="https://heroui.com?utm_source=next-app-template"
+                  href="https://medium.com/@rohitsomvanshi2003/b71a1771356a"
                   title="heroui.com homepage"
                 >
                   <p className="text-primary text-sm">Medium</p>
