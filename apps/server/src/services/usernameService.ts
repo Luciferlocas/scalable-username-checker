@@ -16,42 +16,63 @@ import {
 import { getNextServer } from "./loadBalancerService";
 
 export async function checkUsernameAvailability(
-  username: string
+  username: string,
 ): Promise<UsernameCheckResult> {
   const startTime = Date.now();
   const server = getNextServer();
+  const normalizedUsername = username.toLowerCase();
 
-  console.log(`Checking username availability for "${username}" on ${server}`);
+  console.log(
+    `Checking username availability for "${normalizedUsername}" on ${server}`,
+  );
 
-  if (!checkUsernameInBloomFilter(username)) {
+  if (!checkUsernameInBloomFilter(normalizedUsername)) {
     const endTime = Date.now();
+    console.log(
+      `Username "${normalizedUsername}" not found in Bloom Filter. Likely available.`,
+    );
     return {
-      username,
+      username: normalizedUsername,
       available: true,
       source: "bloom_filter",
       checkTimeMs: endTime - startTime,
     };
   }
 
-  const redisResult = await checkUsernameInRedis(username);
+  const redisResult = await checkUsernameInRedis(normalizedUsername);
   if (redisResult !== null) {
     const endTime = Date.now();
+    console.log(
+      `Username "${normalizedUsername}" found in Redis cache. Available: ${!redisResult}`,
+    );
+
+    let suggestions;
+    if (!redisResult) {
+      suggestions = undefined;
+    } else {
+      suggestions = generateUsernameSuggestions(normalizedUsername, 5);
+    }
+
     return {
-      username,
+      username: normalizedUsername,
       available: !redisResult,
       source: "redis_cache",
       checkTimeMs: endTime - startTime,
+      suggestions,
     };
   }
 
-  if (checkUsernameInTrie(username)) {
-    const suggestions = generateUsernameSuggestions(username, 5);
+  if (checkUsernameInTrie(normalizedUsername)) {
+    const suggestions = generateUsernameSuggestions(normalizedUsername, 5);
     const endTime = Date.now();
 
-    await cacheUsername(username, true);
+    console.log(
+      `Username "${normalizedUsername}" found in Trie. Suggesting alternatives.`,
+    );
+    await cacheUsername(normalizedUsername, true);
 
     return {
-      username,
+      username: normalizedUsername,
       available: false,
       source: "trie",
       suggestions,
@@ -59,54 +80,73 @@ export async function checkUsernameAvailability(
     };
   }
 
-  const exists = await checkUsernameInDatabase(username);
+  const exists = await checkUsernameInDatabase(normalizedUsername);
   const endTime = Date.now();
 
-  await cacheUsername(username, exists);
+  console.log(
+    `Username "${normalizedUsername}" database check. Exists: ${exists}`,
+  );
 
   if (exists) {
-    addUsernameToTrie(username);
-  }
+    await cacheUsername(normalizedUsername, true);
+    addUsernameToTrie(normalizedUsername);
+    addUsernameToBloomFilter(normalizedUsername);
 
-  return {
-    username,
-    available: !exists,
-    source: "database",
-    suggestions: exists ? generateUsernameSuggestions(username, 5) : undefined,
-    checkTimeMs: endTime - startTime,
-  };
+    return {
+      username: normalizedUsername,
+      available: false,
+      source: "database",
+      suggestions: generateUsernameSuggestions(normalizedUsername, 5),
+      checkTimeMs: endTime - startTime,
+    };
+  } else {
+    await cacheUsername(normalizedUsername, false);
+
+    return {
+      username: normalizedUsername,
+      available: true,
+      source: "database",
+      checkTimeMs: endTime - startTime,
+    };
+  }
 }
 
 export async function registerUsername(
-  username: string
+  username: string,
 ): Promise<{ success: boolean; message: string }> {
   try {
-    console.log(`Attempting to register username: ${username}`);
+    const normalizedUsername = username.toLowerCase();
+    console.log(`Attempting to register username: ${normalizedUsername}`);
 
-    const availabilityCheck = await checkUsernameAvailability(username);
+    const availabilityCheck =
+      await checkUsernameAvailability(normalizedUsername);
 
     if (!availabilityCheck.available) {
       return {
         success: false,
-        message: `Username "${username}" is already taken`,
+        message: `Username "${normalizedUsername}" is already taken`,
       };
     }
 
-    const success = await addUsernameToDatabase(username);
+    const success = await addUsernameToDatabase(normalizedUsername);
 
     if (success) {
-      addUsernameToBloomFilter(username);
-      addUsernameToTrie(username);
-      await cacheUsername(username, true);
+      addUsernameToBloomFilter(normalizedUsername);
+      addUsernameToTrie(normalizedUsername);
+      await cacheUsername(normalizedUsername, true);
 
+      console.log(`Successfully registered username: ${normalizedUsername}`);
       return {
         success: true,
-        message: `Username "${username}" registered successfully`,
+        message: `Username "${normalizedUsername}" registered successfully`,
       };
     } else {
+      console.error(
+        `Failed to register username in database: ${normalizedUsername}`,
+      );
       return {
         success: false,
-        message: `Failed to register username "${username}"`,
+        message: `Failed to register username "${normalizedUsername}"`,
       };
     }
   } catch (error) {

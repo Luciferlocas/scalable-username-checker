@@ -7,7 +7,7 @@ let bloomFilter: BloomFilter;
 export async function initBloomFilter(): Promise<void> {
   bloomFilter = new BloomFilter(
     config.bloomFilter.size,
-    config.bloomFilter.hashFunctions
+    config.bloomFilter.hashFunctions,
   );
 
   try {
@@ -30,7 +30,7 @@ export function checkUsernameInBloomFilter(username: string): boolean {
   const mightExist = bloomFilter.has(normalizedUsername);
 
   console.debug(
-    `Bloom filter check for "${username}": ${mightExist ? "might exist" : "definitely available"}`
+    `Bloom filter check for "${username}": ${mightExist ? "might exist" : "definitely available"}`,
   );
   return mightExist;
 }

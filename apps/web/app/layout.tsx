@@ -62,8 +62,8 @@ export default function RootLayout({
                 <Link
                   isExternal
                   className="flex items-center gap-1 text-current"
-                  href="https://heroui.com?utm_source=next-app-template"
-                  title="heroui.com homepage"
+                  href="https://github.com/Luciferlocas/scalable-username-checker/"
+                  title="Github"
                 >
                   <p className="text-primary text-sm">Github</p>
                 </Link>

@@ -7,7 +7,7 @@ import Form from "@/components/form";
 export default async function Home() {
   const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
   const { usernames }: { usernames: string[] } = await fetch(
-    url + "/api/usernames"
+    url + "/api/usernames",
   ).then((res) => res.json());
 
   return (

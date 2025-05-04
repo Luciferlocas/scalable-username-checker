@@ -25,7 +25,7 @@ async function initializeServices() {
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
-    
+
     console.table(routerlogger(app));
   } catch (error) {
     console.error("Failed to initialize services", error);

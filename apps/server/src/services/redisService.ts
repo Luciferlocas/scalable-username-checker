@@ -31,14 +31,14 @@ export async function connectRedis(): Promise<void> {
 }
 
 export async function checkUsernameInRedis(
-  username: string
+  username: string,
 ): Promise<boolean | null> {
   try {
     const normalizedUsername = username.toLowerCase();
     const result = await redisClient.get(`username:${normalizedUsername}`);
 
     console.debug(
-      `Redis cache check for "${username}": ${result ? "found" : "not found"}`
+      `Redis cache check for "${username}": ${result ? "found" : "not found"}`,
     );
 
     return result ? true : null;
@@ -50,7 +50,7 @@ export async function checkUsernameInRedis(
 
 export async function cacheUsername(
   username: string,
-  exists: boolean
+  exists: boolean,
 ): Promise<void> {
   try {
     const normalizedUsername = username.toLowerCase();
@@ -58,7 +58,7 @@ export async function cacheUsername(
       `username:${normalizedUsername}`,
       exists ? "1" : "0",
       "EX",
-      3600
+      3600,
     );
     console.debug(`Cached username "${username}" with exists=${exists}`);
   } catch (error) {

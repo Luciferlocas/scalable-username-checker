@@ -11,7 +11,7 @@ class LoadBalancer {
     this.strategy = strategy;
 
     console.log(
-      `Load balancer initialized with ${servers} servers using ${strategy} strategy`
+      `Load balancer initialized with ${servers} servers using ${strategy} strategy`,
     );
   }
 
@@ -43,7 +43,7 @@ export function initLoadBalancer(): LoadBalancer {
   if (!loadBalancerInstance) {
     loadBalancerInstance = new LoadBalancer(
       config.loadBalancer.servers,
-      config.loadBalancer.strategy
+      config.loadBalancer.strategy,
     );
   }
   return loadBalancerInstance;

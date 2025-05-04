@@ -7,7 +7,7 @@ import { getAllUsernames } from "../services/databaseService";
 
 export async function checkUsername(
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> {
   try {
     const { username } = req.params;
@@ -39,7 +39,7 @@ export async function checkUsername(
 
 export async function createUsername(
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> {
   try {
     const { username } = req.body;
@@ -75,7 +75,7 @@ export async function createUsername(
 
 export async function getAllUsernamesInDatabase(
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<void> {
   try {
     const usernames = await getAllUsernames();

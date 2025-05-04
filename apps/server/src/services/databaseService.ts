@@ -37,7 +37,7 @@ export async function getAllUsernames(): Promise<string[]> {
 }
 
 export async function checkUsernameInDatabase(
-  username: string
+  username: string,
 ): Promise<boolean> {
   try {
     const normalizedUsername = username.toLowerCase();
@@ -46,7 +46,7 @@ export async function checkUsernameInDatabase(
     });
 
     console.debug(
-      `Database check for "${username}": ${result ? "exists" : "available"}`
+      `Database check for "${username}": ${result ? "exists" : "available"}`,
     );
     return !!result;
   } catch (error) {
@@ -56,7 +56,7 @@ export async function checkUsernameInDatabase(
 }
 
 export async function addUsernameToDatabase(
-  username: string
+  username: string,
 ): Promise<boolean> {
   try {
     const normalizedUsername = username.toLowerCase();

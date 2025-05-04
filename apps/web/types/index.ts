@@ -16,6 +16,7 @@ export interface Response {
   available: boolean;
   checkTimeMs: number;
   source: string;
+  suggestions: string[];
 }
 
 export interface CreateUsernameResponse {
